@@ -1,13 +1,18 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DiaryEditor from "./DiaryEditor";
+import Header from "./Header";
+import Nav from "./Nav";
 
 function App() {
   return (
-    <div className="App">
-      <div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Nav />
         <DiaryEditor />
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
