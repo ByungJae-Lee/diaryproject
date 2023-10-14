@@ -1,16 +1,20 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DiaryEditor from "./DiaryEditor";
-import Header from "./Header";
-import Nav from "./Nav";
+import DiaryEditor from "./component/DiaryEditor";
+import Nav from "./component/Nav";
+import LoginPage from "./component/LoginPage";
+import Main from "./component/Main";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
         <Nav />
-        <DiaryEditor />
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/Main" element={<Main />} />
+          <Route path="/DiaryEditor" element={<DiaryEditor />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
