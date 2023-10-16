@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "../CSS/Main.css";
@@ -8,6 +9,11 @@ import "../CSS/Main.css";
 
 const Main = () => {
   const [date, setDate] = useState(new Date());
+  const movePage = useNavigate();
+
+  function goDiaryEditor() {
+    movePage("/DiaryEditor");
+  }
 
   return (
     <div>
@@ -32,8 +38,8 @@ const Main = () => {
 
       <div>
         {/* 일기추가 버튼 */}
-        <button className="create" onClick={() => {}}>
-          +
+        <button className="create" onClick={goDiaryEditor}>
+          일기작성
         </button>
       </div>
     </div>
