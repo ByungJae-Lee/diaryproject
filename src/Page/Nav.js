@@ -1,19 +1,13 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import "./Nav.css";
+import "../CSS/Nav.css";
 
 function Nav() {
   return (
     <div>
       <div className="navbar">
         <Link className="navbarMenu" to={"/"}>
-          Main
-        </Link>
-        <Link className="navbarMenu" to={"/about"}>
-          About
-        </Link>
-        <Link className="navbarMenu" to={"/contact"}>
-          Contact
+          로그아웃
         </Link>
       </div>
     </div>
