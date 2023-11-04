@@ -1,0 +1,30 @@
+.navbar {
+  width: 100%;
+  background-color: blueviolet;
+  padding: 15px 0px;
+  text-align: right;
+}
+
+.navbarMenu {
+  color: white;
+  margin: 8px;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  margin: 0px 10px 0px 30px;
+  /* margin-left: auto; */
+  font-size: 30px;
+  cursor: pointer;
+}
+/* logo 이미지 */
+img {
+  height: 100px;
+  margin-left: 20px;
+  margin-right: auto;
+}

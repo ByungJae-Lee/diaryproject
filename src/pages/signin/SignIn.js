@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LoginPage() {
+function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -34,4 +34,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default SignIn;

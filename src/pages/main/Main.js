@@ -2,18 +2,24 @@ import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "../CSS/Main.css";
+import "../main/Main.css";
+import Modal from "../../components/modal/Modal";
 
 // 1. 달력을 중앙에 배치시킨다
 // 2. 몇 일 이거 없애기
 
 const Main = () => {
   const [date, setDate] = useState(new Date());
+  // 페이지 이동
   const movePage = useNavigate();
-
   function goDiaryEditor() {
     movePage("/DiaryEditor");
   }
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div>
@@ -22,7 +28,7 @@ const Main = () => {
       <div className="calendar-container">
         <Calendar
           value={date}
-          onChange={setDate}
+          onChange={goDiaryEditor}
           // "일 " 제거
           formatDay={(locale, date) =>
             date.toLocaleDateString("en", { day: "numeric" })
@@ -38,10 +44,15 @@ const Main = () => {
 
       <div>
         {/* 일기추가 버튼 */}
-        <button className="create" onClick={goDiaryEditor}>
+        {/* <button className="create" onClick={goDiaryEditor}>
           일기작성
-        </button>
+        </button> */}
       </div>
+      <button onClick={openModal}>Open Modal</button>
+      <Modal isOpen={isModalOpen} closeModal={closeModal}>
+        <h2>hi</h2>
+        <p>it's me</p>
+      </Modal>
     </div>
   );
 };

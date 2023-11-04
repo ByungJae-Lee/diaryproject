@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import "../CSS/DiaryEditor.css";
+import "../diaryeditor/DiaryEditor.css";
 import { McCloudUpload, MdCloudUpload, MdDelete } from "react-icons/md";
 import { AiFillFileImage } from "react-icons/ai";
 

@@ -1,4 +1,4 @@
 const Edit = () => {
-  return <div>sdfsd</div>;
+  return <div>Edit페이지</div>;
 };
 export default Edit;
